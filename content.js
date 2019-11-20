@@ -21,7 +21,7 @@ for (const element of dom) {
 
     if(timestampRegex.test(element.innerHTML))
     {
-        console.info(`stampy: candidate found at ${element.tagName} with id ${element.id}`);
+        console.info(`stampy: candidate found at ${element.tagName.toLowerCase()} element with id: '${element.id || "NONE"}'`);
         element.innerHTML = element.innerHTML.replace(timestampRegex, replaceTimestamp);
         console.info(`stampy: candidate content replaced`);
     }
