@@ -1,6 +1,6 @@
 # Stampy
 
-This repository hosts the source code for Stampy, a simple unix timestamp to date string converter for Google Chrome.
+This repository hosts the source code for Stampy, a simple unix timestamp to readable date converter extension for Google Chrome.
 
 ## Installation
 
