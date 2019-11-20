@@ -2,7 +2,7 @@ console.info("stampy: running unix timestamp conversion for page");
 
 let replaceTimestamp = function(value) {
     let date = new Date(value * 1000);
-    let locale = window.navigator.userLanguage || window.navigator.language;
+    let locale = window.navigator.language || window.navigator.userLanguage;
     let replacement = `${date.toLocaleDateString(locale)} @ ${date.toLocaleTimeString(locale)} (UTC)`;
 
     return replacement;
