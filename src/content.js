@@ -32,5 +32,5 @@
     }
 
     console.timeEnd(timerName);
-    console.info(`stampy - timestamp conversion completed`);
+    console.info("stampy - timestamp conversion completed");
 })();
