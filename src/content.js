@@ -1,5 +1,5 @@
 // use an anon function to avoid polluting the environment after the script is run
-(function() {
+(function () {
     console.info("stampy - running unix timestamp conversion for page");
 
     const timerName = "stampy - document body parsing took";
@@ -22,7 +22,6 @@
 
         return NodeFilter.FILTER_ACCEPT;
     }
-
 
     const timestampRegex = RegExp("[0-9]{10}");
     const nodeIterator = document.createNodeIterator(document.body, NodeFilter.SHOW_TEXT, filterInvalidTextNodes);
