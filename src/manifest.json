@@ -3,11 +3,11 @@
   "name": "Stampy",
   "version": "0.1.0",
   "browser_action": {
-    "default_icon": "browser-icon.png",
+    "default_icon": "logo16.png",
     "icons": {
-      "16": "browser-icon.png",
-      "48": "browser-icon.png",
-      "128": "browser-icon.png"
+      "16": "logo16.png",
+      "48": "logo48.png",
+      "128": "logo128.png"
     }
   },
   "background": {
