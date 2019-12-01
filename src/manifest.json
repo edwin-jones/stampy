@@ -1,7 +1,9 @@
 {
   "manifest_version": 2,
   "name": "Stampy",
-  "version": "0.1.0",
+  "short_name" : "Stampy",
+  "description" : "A simple unix timestamp to readable date converter extension for your browser.",
+  "version": "1.0.0",
   "browser_action": {
     "default_icon": "logo16.png",
     "icons": {

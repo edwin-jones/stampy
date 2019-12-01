@@ -1,10 +1,10 @@
 # Stampy
 
-This repository hosts the source code for Stampy, a simple unix timestamp to readable date converter extension for Google Chrome.
+This repository hosts the source code for Stampy, a simple unix timestamp to readable date converter extension for Chrome and Firefox.
 
 ## Installation
 
-TBD
+You can install stampy via the [Chrome Web Store](https://chrome.google.com/webstore/detail/stampy/ccicllkpedpkilncdaololajfojgaodg) or [Firefox Addons](https://addons.mozilla.org/en-GB/firefox/addon/stampy/) page. Alternatively you can download the latest release from the releases page and install it manually.
 
 ## Usage
 
