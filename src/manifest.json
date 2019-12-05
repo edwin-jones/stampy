@@ -3,7 +3,7 @@
   "name": "Stampy",
   "short_name" : "Stampy",
   "description" : "A simple unix timestamp to readable date converter extension for your browser.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "browser_action": {
     "default_icon": "logo16.png",
     "icons": {
