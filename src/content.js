@@ -5,13 +5,18 @@
     const timerName = "stampy - document body parsing took";
     console.time(timerName);
 
-    function replaceTimestamp(value) {
-        let date = new Date(value * 1000);
-        let locale = window.navigator.language;
-        let replacement = `${date.toLocaleDateString(locale)} @ ${date.toLocaleTimeString(locale)} (UTC)`;
+    var replaceTimestamp = function(multiplier) {
+        return function(value) {
+            let date = new Date(value * multiplier);
+            let locale = window.navigator.language;
+            let replacement = `${date.toLocaleDateString(locale)} @ ${date.toLocaleTimeString(locale)} (UTC)`;
+    
+            return replacement;
+        };
+      };
 
-        return replacement;
-    }
+    const replaceSecondTimestamp = replaceTimestamp(1000);
+    const replaceMillisecondTimestamp = replaceTimestamp(1);
 
     function filterInvalidTextNodes(node) {
 
@@ -23,12 +28,16 @@
         return NodeFilter.FILTER_ACCEPT;
     }
 
-    const timestampRegex = RegExp("[0-9]{10}");
+    const millisecondTimestampRegex = RegExp("[0-9]{13}");
+    const secondTimestampRegex = RegExp("[0-9]{10}");
+    
     const nodeIterator = document.createNodeIterator(document.body, NodeFilter.SHOW_TEXT, filterInvalidTextNodes);
 
     let node;
+
     while (node = nodeIterator.nextNode()) {
-        node.textContent = node.textContent.replace(timestampRegex, replaceTimestamp);
+        node.textContent = node.textContent.replace(millisecondTimestampRegex, replaceMillisecondTimestamp);
+        node.textContent = node.textContent.replace(secondTimestampRegex, replaceSecondTimestamp)
     }
 
     console.timeEnd(timerName);
